@@ -1,17 +1,18 @@
 
-let altcap = {first: '', second: ''};
+let altcap = {};
 
-function capitalize(str) {
+function altcap.capitalize(str) {
   //code here
+  let first, second;
   for(i = 0; i < str.length; i++) {
     if (i%2 === 0) {
-      altcap.first=altcap.first + str[i].toUpperCase();
-      altcap.second=altcap.second + str[i];
+      first=first + str[i].toUpperCase();
+      second=second + str[i];
     } else {
-      altcap.first=altcap.first + str[i];
-      altcap.second=altcap.second + str[i].toUpperCase();
+      first=first + str[i];
+      second=second + str[i].toUpperCase();
     }
   }
-  altcap
+  altcap = `{'${first}', '${second}'}`;
   return altcap
 }
